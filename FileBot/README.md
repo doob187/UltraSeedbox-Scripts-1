@@ -1,5 +1,4 @@
 # FileBot
-
 ## Prerequisites
 
 For the installers and the AMC scripts hosted here to work, you may have to do the following:
@@ -7,22 +6,43 @@ For the installers and the AMC scripts hosted here to work, you may have to do t
 * Uninstall FileBot from the UCP
 * Purchase a FileBot License and upload it to your slot using FTPS/SFTP
 
-## Version 4.8.5 (Recommended)
+## Installation
+
+### Version 4.8.5 (Recommended)
 You can install this version using the instructions below:
 
-1. `mkdir filebot-portable && cd filebot-portable`
-2. `sh -xu <<< "$(curl -fsSL https://raw.githubusercontent.com/ultraseedbox/UltraSeedbox-Scripts/master/FileBot/filebot-485-installer.sh)"`
-3. `filebot --license /path/to/FileBot_License_P1234567.psm`
+1. `wget https://raw.githubusercontent.com/ultraseedbox/UltraSeedbox-Scripts/master/FileBot/filebot-485-installer.sh`
+2. `chmod +x filebot-485-installer.sh`
+3. `./filebot-485-installer.sh`
+4. `rm filebot-485-installer.sh`
+5. `filebot --license /path/to/FileBot_License_P1234567.psm`
 
-## Version 4.9.0
+### Version 4.9.1 (Latest)
 You can install this version using the instructions below:
 
-1. `sh -xu <<< "$(curl -fsSL https://raw.githubusercontent.com/ultraseedbox/UltraSeedbox-Scripts/master/FileBot/filebot-490-installer.sh)"`
-2. `filebot --license /path/to/FileBot_License_P1234567.psm`
+1. `wget https://raw.githubusercontent.com/ultraseedbox/UltraSeedbox-Scripts/master/FileBot/filebot-491-installer.sh`
+2. `chmod +x filebot-491-installer.sh`
+3. `./filebot-491-installer.sh`
+4. `rm filebot-491-installer.sh`
+5. `filebot --license /path/to/FileBot_License_P1234567.psm`
 
-## AMC/ Torrent Client Post-processing
+> To switch version, uninstall it first. This is to prevent any conflicts.
 
-If you're using FileBot for your torrent client post-processing, refer to the AMC folder.
+### AMC/ Torrent Client Post-processing
+
+If you're using FileBot for your torrent client post-processing, refer to the [AMC folder.](https://github.com/ultraseedbox/UltraSeedbox-Scripts/tree/master/FileBot/AMC)
+
+## Uninstallation
+
+### Version 4.8.5
+
+1. `rm -rfv "$HOME"/filebot-485`
+2. `rm "$HOME"/bin/filebot`
+
+### Version 4.9.1
+
+1. `rm -rfv "$HOME"/filebot-491`
+2. `rm "$HOME"/bin/filebot`
 
 ## Issues/Bugs
 
