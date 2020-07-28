@@ -45,7 +45,7 @@ timeout 10  "$HOME"/bin/xteve -port="$port"
 sed -i "s|/tmp/xteve|/tmp/$USER/xteve|g" "$HOME"/.xteve/settings.json
 
 # systemd service
-
+export XDG_RUNTIME_DIR=/run/user/"$UID"
 echo "[Unit]
 Description=xTeve Tuner
 
@@ -68,5 +68,4 @@ echo "Access xTeVe's Web Interface via http://$HOSTNAME.usbx.me:$port/web"
 
 # Cleanup
 rm -rfv "$HOME"/.xteve-tmp
-rm -- "$0"
 exit
