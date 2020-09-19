@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# MergerFS 2.28.3 Installer/Updater by Xan#7777
+# MergerFS Installer/Updater by Xan#7777
 
 if pgrep "mergerfs";
 then
@@ -9,7 +9,8 @@ then
 else
     clear
     echo "mergerfs is installing/upgrading..."
-    wget https://github.com/trapexit/mergerfs/releases/download/2.28.3/mergerfs_2.28.3.debian-stretch_amd64.deb -O "$HOME"/.mergerfs-tmp/mergerfs.deb
+    mkdir -p "$HOME"/.mergerfs-tmp/
+    wget https://github.com/trapexit/mergerfs/releases/download/2.30.0/mergerfs_2.30.0.debian-stretch_amd64.deb -O "$HOME"/.mergerfs-tmp/mergerfs.deb
     dpkg -x "$HOME"/.mergerfs-tmp/mergerfs.deb "$HOME"/.mergerfs-tmp
     cp "$HOME"/.mergerfs-tmp/usr/bin/* "$HOME"/bin
 fi
