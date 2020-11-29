@@ -7,7 +7,7 @@
 # -----------------------------------------------------------------------------
 
 SOURCE_DIR="$HOME/Stuff/Local/"
-DESTINATION_DIR="gdrive:"
+DESTINATION_DIR="remote:"
 
 DISCORD_WEBHOOK_URL=""
 DISCORD_ICON_OVERRIDE="https://i.imgur.com/MZYwA1I.png"
@@ -108,7 +108,7 @@ else
         ]
       }'
       
-      /usr/local/bin/curl -H "Content-Type: application/json" -d "$notification_data" $DISCORD_WEBHOOK_URL 
+      /usr/bin/curl -H "Content-Type: application/json" -d "$notification_data" $DISCORD_WEBHOOK_URL 
     }
     
     if [ "$transferred_amount" != "0" ]; then
